@@ -20,13 +20,45 @@ const INIT_STAT = {
   spassword: "",
   stlogin: true,
   stdata: false,
-  noticeboard: []
+  noticeboard: [],
+  adminsignup: [],
+  adminloginboard: true,
+  adminsignupboard: false,
+  adminmainboard: false,
+  admindataall: {}
 }
 
 export const cartreducer = (state = INIT_STAT, action) => {
   switch (action.type) {
 
- 
+    case "LOGINA":
+      return {
+        ...state,
+        admindataall: action.payload,
+        adminloginboard: false,
+        adminsignupboard: false,
+        adminmainboard: true
+      }
+
+
+
+    case "SIGNUPT":
+      return {
+        ...state,
+        adminloginboard: false,
+        adminsignupboard: true,
+        adminmainboard: false
+      }
+
+    case "ADMINSIGN":
+      return {
+        ...state,
+        adminsignup: [...state.adminsignup, action.payload],
+        adminloginboard: true,
+        adminsignupboard: false,
+        adminmainboard: false
+      }
+
 
     case "NOTICEADD":
       return {
@@ -34,7 +66,7 @@ export const cartreducer = (state = INIT_STAT, action) => {
         noticeboard: [...state.noticeboard, action.payload],
       }
 
-  
+
 
     case "DELETENOTICE":
       const updatenotice = state.noticeboard.filter((elem) => {
@@ -69,12 +101,12 @@ export const cartreducer = (state = INIT_STAT, action) => {
         sname: action.payload,
       }
 
-      case "CHPASS":
-        return {
-          ...state,
-          spassword: action.payload,
-        }
-          
+    case "CHPASS":
+      return {
+        ...state,
+        spassword: action.payload,
+      }
+
     case "SGENDER":
       return {
         ...state,
@@ -225,11 +257,9 @@ export const cartreducer = (state = INIT_STAT, action) => {
 
       return {
         ...state,
-        teacherstoggle: false,
-        teacherscom: true,
-        teachersnotice: false,
-        teachersstudnt: false,
-        teachershome: false,
+        adminloginboard: true,
+  adminsignupboard: false,
+  adminmainboard: false,
       }
     case "TOGGLEHOME":
 

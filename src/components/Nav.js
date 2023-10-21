@@ -13,21 +13,21 @@ const Nav = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/admin"  className="textdec">
-                           Admin
+                        <NavLink to="/admin" className="textdec">
+                            Admin
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/teacher"  className="textdec">
-                           Teacher
+                        <NavLink to="/teacher" className="textdec">
+                            Teacher
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/student"  className="textdec">
+                        <NavLink to="/student" className="textdec">
                             Student
                         </NavLink>
                     </li>
-                  
+
                 </ul>
 
             </div>

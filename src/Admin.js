@@ -7,36 +7,49 @@ import "./style.css";
 import AdminHome from './AdminHome';
 import AdminNotice from './AdminNotice';
 import AdminStudents from './AdminStudents';
-
+import AdminLogin from './AdminLogin';
+import AdminSignup from './AdminSignup';
 
 const Admin = () => {
   const teacherstoggle = useSelector((state) => state.cartreducer.teacherstoggle);
-  const teacherscom = useSelector((state) => state.cartreducer.teacherscom);
   const teachersnotice = useSelector((state) => state.cartreducer.teachersnotice);
   const teachersstudnt = useSelector((state) => state.cartreducer.teachersstudnt);
+
+  const adminloginboard = useSelector((state) => state.cartreducer.adminloginboard);
+  const adminsignupboard = useSelector((state) => state.cartreducer.adminsignupboard);
+  const adminmainboard = useSelector((state) => state.cartreducer.adminmainboard);
   const teachershome = useSelector((state) => state.cartreducer.teachershome);
-  return (
-    <div className='admin-main' >
-      <NavbarAdmin />
+  return (<>
 
-      {teacherstoggle && (
-        <AddTeachers />
-      )}
-           {/* {teacherscom && (
-        <AdminCom />
-      )} */}
-           {teachershome && (
-        <AdminHome  />
-      )}
-           {teachersnotice && (
-        <AdminNotice  />
-      )}
-           {teachersstudnt && (
-        <AdminStudents />
-      )}
+    {adminloginboard && (
+      <AdminLogin />
+    )}
+    {adminsignupboard && (
+      <AdminSignup />
+    )}
+
+    {adminmainboard && (
+
+      <div className='admin-main' >
+        <NavbarAdmin />
+
+        {teacherstoggle && (
+          <AddTeachers />
+        )}
+        {teachershome && (
+          <AdminHome />
+        )}
+        {teachersnotice && (
+          <AdminNotice />
+        )}
+        {teachersstudnt && (
+          <AdminStudents />
+        )}
+      </div>
+    )}
 
 
-    </div>
+  </>
   )
 }
 

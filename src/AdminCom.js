@@ -2,7 +2,7 @@ import React from 'react'
 
 const AdminCom = () => {
   return (
-    <div>AdminCom</div>
+    <div>AdminComplians</div>
   )
 }
 

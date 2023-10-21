@@ -46,7 +46,6 @@ const AdminNotice = () => {
               <div className="header"> <span className="spanpur"> Topic: </span> {elem.name}</div>
               <div className="headerw"> <span className="spanpur"> Discription: </span> {elem.discription}</div>
               <div style={{ display: "flex" }}>
-
                 <button onClick={() => deletenotice(elem.id)} className="delete-board-n"><RxCrossCircled /> </button>
               </div>
             </div>

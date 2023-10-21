@@ -10,8 +10,23 @@
   border-radius: 10px;
   margin-top: 10px;
 }
+.in-main-sg {
+  width: 243px;
+  /* height: 30px; */
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.ht-sg{
+  height: 25px;
+}
 .notice-sub{
   margin-top: 10px;
+}
+.sign-up-a{
+  text-decoration: underline;
+color: blue;
+  font-weight: 500;
+  cursor: pointer;
 }
 .topic{
   width: 200px;
@@ -26,7 +41,14 @@
 .img-main-st {
   width: 250px;
 }
-
+.img-main-st-sg {
+  width: 150px;
+}
+.img-div-sg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .class-div {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
   width: 568px;

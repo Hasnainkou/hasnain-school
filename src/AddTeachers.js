@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
-import { TNAME, TGENDER, DLT, WORK, REALDLT, REALEDIT, TNUMBER, TADDRESS, TCLASS } from './redux/actions/action';
+import { TNAME, TGENDER, DLT, WORK, REALDLT, REALEDIT, TNUMBER, TADDRESS  } from './redux/actions/action';
 import {AiOutlineEdit, AiOutlineDelete  } from 'react-icons/ai';
 import "./style.css";
 import { useState } from 'react';
@@ -14,7 +14,6 @@ const AddTeachers = () => {
   const workvalues = useSelector((state) => state.cartreducer.workvalue);
   const contectnumber = useSelector((state) => state.cartreducer.contectnumber);
   const address = useSelector((state) => state.cartreducer.address);
-  const classesunderthem = useSelector((state) => state.cartreducer.classesunderthem);
 
   const cartses = useSelector((state) => state.cartreducer.carts);
   const dispatch = useDispatch();
@@ -35,9 +34,6 @@ const AddTeachers = () => {
   }
   const changeaddress = (ev) => {
     dispatch(TADDRESS(ev));
-  }
-  const changeclasses = (ev) => {
-    dispatch(TCLASS(ev));
   }
 
   const sorting = (ev) => {

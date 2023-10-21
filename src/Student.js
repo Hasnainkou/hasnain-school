@@ -51,13 +51,9 @@ const Student = () => {
 
             <div className='in-main'>
               <input type="password" value={pass} id="demo" onChange={passchange} className='in-main' placeholder='Password' /></div>
-
-
             <div className="sub-btnnw">
               <div onClick={checkd} className='btnsubss'>Log In</div>
             </div>
-
-
           </div>
         </div>
       )}
@@ -73,7 +69,6 @@ const Student = () => {
               <div onClick={logout} className='btnsubwsa'>Log Out</div>
             </div>
           </div>
-
         </div>
 
 
@@ -94,7 +89,6 @@ const Student = () => {
         {noticeboard.length === 0 && (<div style={{ textAlign: "center", fontSize: "18px", marginTop: "15px", backgroundColor: "black", color: "white" }} className='no-notie'>No Notice To Show Right Now</div>)}
       </>
       )}
-
 
     </div>
   )

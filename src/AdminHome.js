@@ -1,15 +1,14 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const AdminHome = () => {
   const teachername = useSelector((state) => state.cartreducer.carts);
   const student = useSelector((state) => state.cartreducer.student);
+  const admindataall = useSelector((state) => state.cartreducer.admindataall);
   const arrylength = teachername.length
   const stdlength = student.length
 
-  return (
+  return (<>
     <div className='admin-right'>
       <div className="add-space">
         <div className="adhome-f ad-home">
@@ -30,8 +29,10 @@ const AdminHome = () => {
           <div className='ad-home-total'>{arrylength}</div>
         </div>
       </div>
-
+      <h3 style={{textAlign:"center"}}>Welcome to the dashboard "{admindataall.adminname}"</h3>
     </div>
+  
+    </>
   )
 }
 

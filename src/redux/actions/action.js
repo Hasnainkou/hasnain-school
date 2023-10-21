@@ -92,11 +92,10 @@ export const TOGGLENOTI = (id) => {
     }
 }
 
-export const TOGGLECOM = (id) => {
+export const TOGGLECOM = () => {
     return {
         type: "TOGGLECOM",
-        payload: id
-    }
+        }
 }
 
 
@@ -219,6 +218,27 @@ export const DELETENOTICE = (id) => {
 export const CHPASS = (id) => {
     return {
         type: "CHPASS",
+        payload: id
+    }
+}
+
+export const ADMINSIGN = (id) => {
+    return {
+        type: "ADMINSIGN",
+        payload: id
+    }
+}
+
+export const SIGNUPT = (id) => {
+    return {
+        type: "SIGNUPT",
+        payload: id
+    }
+}
+
+export const LOGINA = (id) => {
+    return {
+        type: "LOGINA",
         payload: id
     }
 }

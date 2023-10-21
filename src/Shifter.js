@@ -2,18 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import "./style.css";
 
-
-
 const Shifter = () => {
-
-
     return (
         <div className='shift-main'>
-
             <div className="navyi11">
-
                 <div className="header-center-li">
-                    
                     <NavLink to="/admin" className="textdec3">
                         Admin
                     </NavLink>
@@ -29,18 +22,6 @@ const Shifter = () => {
                     </NavLink>
                 </div>
             </div>
-
-
-{/* 
-            <div className="shiftadmin">
-
-            </div>
-            <div className="shiftteacher">
-
-            </div>
-            <div className="shiftstudent">
-
-            </div> */}
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
 import { SNAME, SGENDER, SSAVE, STDDLT, STDEDIT, CHPASS } from './redux/actions/action';
-import {AiOutlineEdit, AiOutlineDelete  } from 'react-icons/ai';
+import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
 import "./style.css";
 import { useState } from 'react';
 
@@ -20,11 +20,11 @@ const AdminStudent = () => {
   const changegenderst = (ev) => {
     dispatch(SGENDER(ev));
   }
- 
+
   const sorting = (ev) => {
     const val = ev.target.value
     setClassn(val)
-      }
+  }
 
 
   const deleteItems = (ev) => {
@@ -35,13 +35,13 @@ const AdminStudent = () => {
     dispatch(STDEDIT(ev));
   }
 
- 
-  const   changegepass = (ev) => {
+
+  const changegepass = (ev) => {
     dispatch(CHPASS(ev));
   }
 
   const saves = () => {
-    if (classn && sname && sgender ) {
+    if (classn && sname && sgender) {
       const allinpudata = {
         id: new Date().getTime().toString(),
         sname: sname,
@@ -52,35 +52,32 @@ const AdminStudent = () => {
       dispatch(SSAVE(allinpudata));
     } else {
       alert("Please Enter a Valid Data")
-    }  }
+    }
+  }
 
 
-    let fisrtclass = student.filter(
-      (curItem) => curItem.sclass == "1st"
-    );
-    let secondclass = student.filter(
-      (curItem) => curItem.sclass == "2nd"
-    );
-    let thirdclass = student.filter(
-      (curItem) => curItem.sclass == "3rd"
-    );
-    let fourthclass = student.filter(
-      (curItem) => curItem.sclass == "4th"
-    );
-    let fifthclass = student.filter(
-      (curItem) => curItem.sclass == "5th"
-    );
+  let fisrtclass = student.filter(
+    (curItem) => curItem.sclass == "1st"
+  );
+  let secondclass = student.filter(
+    (curItem) => curItem.sclass == "2nd"
+  );
+  let thirdclass = student.filter(
+    (curItem) => curItem.sclass == "3rd"
+  );
+  let fourthclass = student.filter(
+    (curItem) => curItem.sclass == "4th"
+  );
+  let fifthclass = student.filter(
+    (curItem) => curItem.sclass == "5th"
+  );
 
   return (
 
     <div className='admin-right'>
-<div className="add-teacher">ADD NEW STUDENT</div>
+      <div className="add-teacher">ADD NEW STUDENT</div>
 
- 
       <div className="add-space">
-
-
-
         <div className="work-main">
           <div className="work-left"> Name<sup className='sup'>*</sup>  : </div>
           <div className="work-text">
@@ -106,12 +103,12 @@ const AdminStudent = () => {
         <div className="work-main">
           <div className="work-left">CHOOSE CLASS <sup className='sup'>*</sup>  </div>
           <div className="work-text">
-          <select
+            <select
               name="sort"
               id="sort"
               className="  login-inn"
-             onClick={sorting}
-              >
+              onClick={sorting}
+            >
               <option value="1st"> class 1st</option>
               <option value="#" disabled></option>
               <option value="2nd">class 2nd</option>
@@ -128,24 +125,24 @@ const AdminStudent = () => {
 
 
       </div>
-      <div className="work-main" style={{marginLeft:"20px"}}>
-          <div className="work-left">Password<sup className='sup'>*</sup>  : </div>
-          <div className="work-text">
-            <input type="text" placeholder="Enter Password"
-              value={spassword}
-              onChange={(e) => changegepass(e.target.value)}
-              className="input-fild-new "
-            />
-          </div>
+      <div className="work-main" style={{ marginLeft: "20px" }}>
+        <div className="work-left">Password<sup className='sup'>*</sup>  : </div>
+        <div className="work-text">
+          <input type="text" placeholder="Enter Password"
+            value={spassword}
+            onChange={(e) => changegepass(e.target.value)}
+            className="input-fild-new "
+          />
         </div>
+      </div>
 
       <div className="sub-btnn">
         <div onClick={saves} className='btnsub'>Save</div>
       </div>
 
 
-{/* first class */} <div className="mater-div-ad">
-<div style={{textAlign:"center", fontSize:"20px", }} className='class-div'>1st Class</div></div>
+      {/* first class */} <div className="mater-div-ad">
+        <div style={{ textAlign: "center", fontSize: "20px", }} className='class-div'>1st Class</div></div>
       {fisrtclass.map((elem) => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
@@ -153,9 +150,9 @@ const AdminStudent = () => {
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
-                    <div style={{ display: "flex" }}>
-              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit/>Edit</button>
-              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete/>Delete</button>
+            <div style={{ display: "flex" }}>
+              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit />Edit</button>
+              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete />Delete</button>
             </div>
           </div>
         </div>
@@ -163,9 +160,9 @@ const AdminStudent = () => {
       })}
 
       {/* first class end */}
-      
-{/* secondclass class */} <div className="mater-div-ad">
-<div style={{textAlign:"center", fontSize:"20px", }} className='class-div'>2nd Class</div></div>
+
+      {/* secondclass class */} <div className="mater-div-ad">
+        <div style={{ textAlign: "center", fontSize: "20px", }} className='class-div'>2nd Class</div></div>
       {secondclass.map((elem) => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
@@ -173,9 +170,9 @@ const AdminStudent = () => {
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
-                    <div style={{ display: "flex" }}>
-              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit/>Edit</button>
-              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete/>Delete</button>
+            <div style={{ display: "flex" }}>
+              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit />Edit</button>
+              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete />Delete</button>
             </div>
           </div>
         </div>
@@ -183,9 +180,9 @@ const AdminStudent = () => {
       })}
 
       {/* secondclass end */}
-      
-{/* thirdclass class */} <div className="mater-div-ad">
-<div style={{textAlign:"center", fontSize:"20px", }} className='class-div'>3rd Class</div></div>
+
+      {/* thirdclass class */} <div className="mater-div-ad">
+        <div style={{ textAlign: "center", fontSize: "20px", }} className='class-div'>3rd Class</div></div>
       {thirdclass.map((elem) => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
@@ -193,9 +190,9 @@ const AdminStudent = () => {
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
-                    <div style={{ display: "flex" }}>
-              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit/>Edit</button>
-              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete/>Delete</button>
+            <div style={{ display: "flex" }}>
+              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit />Edit</button>
+              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete />Delete</button>
             </div>
           </div>
         </div>
@@ -203,9 +200,9 @@ const AdminStudent = () => {
       })}
 
       {/* thirdclass end */}
-      
-{/* fourthclass class */} <div className="mater-div-ad">
-<div style={{textAlign:"center", fontSize:"20px", }} className='class-div'>4th Class</div></div>
+
+      {/* fourthclass class */} <div className="mater-div-ad">
+        <div style={{ textAlign: "center", fontSize: "20px", }} className='class-div'>4th Class</div></div>
       {fourthclass.map((elem) => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
@@ -213,9 +210,9 @@ const AdminStudent = () => {
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
-                    <div style={{ display: "flex" }}>
-              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit/>Edit</button>
-              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete/>Delete</button>
+            <div style={{ display: "flex" }}>
+              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit />Edit</button>
+              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete />Delete</button>
             </div>
           </div>
         </div>
@@ -223,9 +220,9 @@ const AdminStudent = () => {
       })}
 
       {/* fourthclass end */}
-      
-{/* fifthclass */} <div className="mater-div-ad">
-<div style={{textAlign:"center", fontSize:"20px" }} className='class-div'>5th Class</div></div>
+
+      {/* fifthclass */} <div className="mater-div-ad">
+        <div style={{ textAlign: "center", fontSize: "20px" }} className='class-div'>5th Class</div></div>
       {fifthclass.map((elem) => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
@@ -233,9 +230,9 @@ const AdminStudent = () => {
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
-                    <div style={{ display: "flex" }}>
-              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit/>Edit</button>
-              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete/>Delete</button>
+            <div style={{ display: "flex" }}>
+              <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit />Edit</button>
+              <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete />Delete</button>
             </div>
           </div>
         </div>

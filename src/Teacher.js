@@ -8,8 +8,6 @@ import AdminHome from './AdminHome';
 import AdminNotice from './AdminNotice';
 import AdminStudents from './AdminStudents';
 
-
-
 const Teacher = () => {
 
   const teacherstoggle = useSelector((state) => state.cartreducer.teacherstoggle);

@@ -9,10 +9,8 @@ import { VscChromeClose } from "react-icons/vsc";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
 
-
   window.onscroll = function () {
     var nav = document.getElementById('head45');
-
     if (window.scrollY > 40) {
       nav.classList.add("navbar1");
     } else {
@@ -67,7 +65,6 @@ const Header = () => {
         </div>
       </div>
     )}
-
   </>
   );
 };
