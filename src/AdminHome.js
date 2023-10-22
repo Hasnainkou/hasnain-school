@@ -33,7 +33,7 @@ const AdminHome = () => {
       <h3 style={{textAlign:"center"}}>Welcome To The Dashboard Mr. "{admindataall.adminname}"</h3>
       <h4 style={{textAlign:"center"}}>Admins List</h4>
       {adminsignup.map((e, id) => (
-        <p key={id} style={{textAlign:"center"}}> {e.adminname}   </p>
+        <p key={id} style={{textAlign:"center"}}>{id+1}. {e.adminname}   </p>
       ))}
     </div>
   

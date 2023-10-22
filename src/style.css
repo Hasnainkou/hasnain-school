@@ -89,7 +89,7 @@
 
 .class-div {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
-  width: 568px;
+  width: 200px;
   margin-top: 80px;
 }
 
@@ -430,11 +430,16 @@
   border-radius: 3px;
   font-size: 16px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
-  border: none;
+  border: 1.5px solid #0dabb3;
   cursor: pointer;
-
+  transition: 0.4s all ease;
 }
-
+.btnsubss:hover {
+  background-color: #ffffff;
+  color: #0dabb3;
+  transition: 0.4s all ease;
+  /* border: 1px solid #0dabb3; */
+}
 .btnsub {
   background-color: #0dabb3;
   width: 100px;

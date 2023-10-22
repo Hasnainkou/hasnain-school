@@ -21,7 +21,6 @@ const Header = () => {
   return (<>
 
     <div className="maincon">
-
       <div className="warperr" id="head45" >
         <NavLink to="/" className="textdec ">
           <div> School Management App By Hasnain</div>

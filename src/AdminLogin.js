@@ -13,11 +13,6 @@ const AdminLogin = () => {
   const dispatch = useDispatch();
   const Bruno = adminsignup.find((person) => person.adminname === inputdata)
 console.log(Bruno)
-  // const logout = () => {
-  //   dispatch(LOGOUT());
-  //   setInputData("");
-  //   setPass("")
-  // }
 
   const passchange = (e) => {
     setPass(e.target.value)

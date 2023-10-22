@@ -138,7 +138,6 @@ const AdminStudent = () => {
          </div>
  
  
- 
        </div>
        <div className="pass-div-save">
        <div className="work-main" style={{ marginLeft: "20px" }}>
@@ -170,6 +169,7 @@ const AdminStudent = () => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
             <div className="head"> <span className="spanpur"> STUDENT NAME: </span> {elem.sname}</div>
+            <div className="head"> <span className="spanpur"> PASSWORD: </span> {elem.spassword}</div>
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
@@ -190,9 +190,10 @@ const AdminStudent = () => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
             <div className="head"> <span className="spanpur"> STUDENT NAME: </span> {elem.sname}</div>
+            <div className="head"> <span className="spanpur"> PASSWORD: </span> {elem.spassword}</div>
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
-
+    
             <div style={{ display: "flex" }}>
               <button onClick={() => editItem(elem.id)} className="edit-board"><AiOutlineEdit />Edit</button>
               <button onClick={() => deleteItems(elem.id)} className="delete-board"><AiOutlineDelete />Delete</button>
@@ -210,6 +211,7 @@ const AdminStudent = () => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
             <div className="head"> <span className="spanpur"> STUDENT NAME: </span> {elem.sname}</div>
+            <div className="head"> <span className="spanpur"> PASSWORD: </span> {elem.spassword}</div>
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
@@ -230,6 +232,7 @@ const AdminStudent = () => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
             <div className="head"> <span className="spanpur"> STUDENT NAME: </span> {elem.sname}</div>
+            <div className="head"> <span className="spanpur"> PASSWORD: </span> {elem.spassword}</div>
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 
@@ -250,6 +253,7 @@ const AdminStudent = () => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
             <div className="head"> <span className="spanpur"> STUDENT NAME: </span> {elem.sname}</div>
+            <div className="head"> <span className="spanpur"> PASSWORD: </span> {elem.spassword}</div>
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.sgender}</div>
             <div className="head"> <span className="spanpur"> CLASS: </span> {elem.sclass}</div>
 

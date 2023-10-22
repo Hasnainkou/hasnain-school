@@ -54,13 +54,13 @@ const Student = () => {
             <div className="sub-btnnw">
               <div onClick={checkd} className='btnsubss'>Log In</div>
             </div>
+            <p style={{textAlign:"center"}}>Don't have an account? <br /> Contect to your teacher</p>
           </div>
         </div>
       )}
 
       {stdata && (<>
         <div className='std-logout'>
-
           <div className="master-div-sted">
             <div>Your Name:  {sdata.sname}</div>
             <div> Class: {sdata.sclass}</div>

@@ -27,11 +27,8 @@ const Nav = () => {
                             Student
                         </NavLink>
                     </li>
-
                 </ul>
-
             </div>
-
         </>
 
     );

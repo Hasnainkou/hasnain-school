@@ -107,16 +107,7 @@ const AddTeachers = () => {
             />
           </div>
         </div>
-
-
-
       </div>
-
-
-
-
-
-
 
 
       <div className="add-space">
@@ -168,31 +159,19 @@ const AddTeachers = () => {
          
           </div>
         </div>
-
-
-
       </div>
-
-
-
-
-
-
       <div className="sub-btnn">
         <div onClick={saves} className='btnsub'>Save</div>
       </div>
 
-
-
-
       {cartses.map((elem) => {
         return (<div key={elem.id} className="main-bored ">
           <div className="disply-flex-pur">
-            <div className="head"> <span className="spanpur"> TEACHER NAME: </span> {elem.name}</div>
+            <div className="head"> <span className="spanpur"> NAME: </span> {elem.name}</div>
             <div className="head"> <span className="spanpur"> GENDER: </span> {elem.gender}</div>
             <div className="head"> <span className="spanpur"> WORK: </span> {elem.work}</div>
 
-            <div className="head"> <span className="spanpur"> TEACHER NUMBER: </span> {elem.number}</div>
+            <div className="head"> <span className="spanpur"> PHONE NUMBER: </span> {elem.number}</div>
             <div className="head"> <span className="spanpur"> ADDRESS: </span> {elem.address}</div>
             <div className="head"> <span className="spanpur"> CLASSES: </span> {elem.classes}</div>
 
