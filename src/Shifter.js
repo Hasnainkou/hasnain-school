@@ -6,21 +6,18 @@ const Shifter = () => {
     return (
         <div className='shift-main'>
             <div className="navyi11">
-                <div className="header-center-li">
-                    <NavLink to="/admin" className="textdec3">
-                        Admin
-                    </NavLink>
+                <NavLink to="/admin" className="textdec3">   <div className="header-center-li-w">
+                    Admin
                 </div>
-                <div className="header-center-li">
-                    <NavLink to="/teacher" className="textdec3">
-                        Teacher
-                    </NavLink>
+                </NavLink>
+                <NavLink to="/teacher" className="textdec3">     <div className="header-center-li-w">
+                    Teacher
                 </div>
-                <div className="header-center-li">
-                    <NavLink to="/student" className="textdec3">
-                        Student
-                    </NavLink>
+                </NavLink>
+                <NavLink to="/student" className="textdec3">    <div className="header-center-li-w">
+                    Student
                 </div>
+                </NavLink>
             </div>
         </div>
     )

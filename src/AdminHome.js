@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 const AdminHome = () => {
   const teachername = useSelector((state) => state.cartreducer.carts);
   const student = useSelector((state) => state.cartreducer.student);
+  const adminsignup = useSelector((state) => state.cartreducer.adminsignup);
   const admindataall = useSelector((state) => state.cartreducer.admindataall);
   const arrylength = teachername.length
   const stdlength = student.length
@@ -29,7 +30,11 @@ const AdminHome = () => {
           <div className='ad-home-total'>{arrylength}</div>
         </div>
       </div>
-      <h3 style={{textAlign:"center"}}>Welcome to the dashboard "{admindataall.adminname}"</h3>
+      <h3 style={{textAlign:"center"}}>Welcome To The Dashboard Mr. "{admindataall.adminname}"</h3>
+      <h4 style={{textAlign:"center"}}>Admins List</h4>
+      {adminsignup.map((e, id) => (
+        <p key={id} style={{textAlign:"center"}}> {e.adminname}   </p>
+      ))}
     </div>
   
     </>

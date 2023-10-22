@@ -25,11 +25,32 @@ const INIT_STAT = {
   adminloginboard: true,
   adminsignupboard: false,
   adminmainboard: false,
-  admindataall: {}
+  admindataall: {},
+  addstdtogle: true,
+  addstdinputto: false
 }
 
 export const cartreducer = (state = INIT_STAT, action) => {
   switch (action.type) {
+
+
+
+    case "ADDNEWSTDS":
+      return {
+        ...state,
+        addstdtogle: false,
+        addstdinputto: true
+      }
+
+    case "CLOSESTDINPUT":
+      return {
+        ...state,
+        addstdtogle: true,
+        addstdinputto: false,
+        sname: '',
+        sgender: '',
+        spassword: "",
+      }
 
     case "LOGINA":
       return {
@@ -93,7 +114,6 @@ export const cartreducer = (state = INIT_STAT, action) => {
       }
 
 
-
     // student section start
     case "SNAME":
       return {
@@ -121,9 +141,9 @@ export const cartreducer = (state = INIT_STAT, action) => {
         sname: '',
         sgender: '',
         spassword: "",
+        addstdtogle: true,
+        addstdinputto: false
       }
-
-
 
 
     case "STDDLT":
@@ -151,11 +171,9 @@ export const cartreducer = (state = INIT_STAT, action) => {
         sname: newEditstd.sname,
         sgender: newEditstd.sgender,
         spassword: newEditstd.spassword,
+        addstdtogle: false,
+        addstdinputto: true,
       }
-
-
-
-
 
     // student section end
 
@@ -194,10 +212,7 @@ export const cartreducer = (state = INIT_STAT, action) => {
 
 
 
-
-
     case "RMV_CART":
-
       return {
         ...state,
         carts: [...state.carts, action.payload],
@@ -241,8 +256,6 @@ export const cartreducer = (state = INIT_STAT, action) => {
       }
 
 
-
-
     case "TOGGLE_TEACHERS":
 
       return {
@@ -258,8 +271,8 @@ export const cartreducer = (state = INIT_STAT, action) => {
       return {
         ...state,
         adminloginboard: true,
-  adminsignupboard: false,
-  adminmainboard: false,
+        adminsignupboard: false,
+        adminmainboard: false,
       }
     case "TOGGLEHOME":
 
@@ -275,7 +288,6 @@ export const cartreducer = (state = INIT_STAT, action) => {
 
       return {
         ...state,
-        // teacherstoggle: teachersT,
         teacherstoggle: false,
         teacherscom: false,
         teachersnotice: false,
@@ -294,9 +306,6 @@ export const cartreducer = (state = INIT_STAT, action) => {
       }
 
 
-
-
-
     case "SRT_ALL_TWO":
       const newSrttwo = state.products.filter((curItem) => curItem.id > 15);
       return {
@@ -305,7 +314,7 @@ export const cartreducer = (state = INIT_STAT, action) => {
       }
 
 
-    case "ADD_CART":
+    case "ADD_OBJ":
 
       const newPropertyName = 'amountt';
       const newPropertyValue = 1;

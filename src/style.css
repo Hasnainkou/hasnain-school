@@ -1,7 +1,20 @@
 .work-main {
   display: flex;
-
   align-items: center;
+}
+
+.add-new-sdt-main {
+  position: fixed;
+  top: 85px;
+  right: 44px;
+  width: 948px;
+  transition: 1.3s all ease;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  padding: 5px;
+  padding-bottom: 20px;
 }
 
 .in-main {
@@ -10,69 +23,102 @@
   border-radius: 10px;
   margin-top: 10px;
 }
+
+.first-div-mr {
+  margin-top: 140px;
+}
+
+.pass-div-save {
+  display: flex;
+  justify-content: space-between;
+}
+
 .in-main-sg {
   width: 243px;
   /* height: 30px; */
   border-radius: 5px;
   margin-top: 5px;
 }
-.ht-sg{
+
+.ht-sg {
   height: 25px;
 }
-.notice-sub{
+
+.notice-sub {
   margin-top: 10px;
 }
-.sign-up-a{
+
+.sign-up-a {
   text-decoration: underline;
-color: blue;
+  color: blue;
   font-weight: 500;
   cursor: pointer;
 }
-.topic{
+
+.topic {
   width: 200px;
-  height: 20px;  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
-  border-radius: 9px; padding: 5px; margin-top: 10px;
+  height: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
+  border-radius: 9px;
+  padding: 5px;
+  margin-top: 10px;
 }
-.details{
+
+.details {
   width: 400px;
-  height: 100px;  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
-  border-radius: 9px; padding: 5px; margin-top: 10px;
+  height: 100px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
+  border-radius: 9px;
+  padding: 5px;
+  margin-top: 10px;
 }
+
 .img-main-st {
   width: 250px;
 }
+
 .img-main-st-sg {
   width: 150px;
 }
-.img-div-sg{
+
+.img-div-sg {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .class-div {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
   width: 568px;
   margin-top: 80px;
 }
-.header-center-li{
+
+.header-center-li-w {
   border: 2px solid #0dabb3;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
   padding: 50px;
-  border-radius: 20px; 
+  border-radius: 20px;
+  cursor: pointer;
 }
 
+.header-center-li-w:hover {
+  background-color: #0dabb3;
+  color: white;
+}
 
-.admin-main{
+.admin-main {
   width: 100%;
   height: 80vh;
 }
+
 .std-logout {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-.master-div-sted{
+
+.master-div-sted {
   width: 60%;
   margin-top: 50px;
   display: flex;
@@ -81,6 +127,7 @@ color: blue;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
   padding: 20px;
 }
+
 .mater-div-ad {
   width: 100%;
   display: flex;
@@ -94,8 +141,6 @@ color: blue;
   justify-content: center;
   margin-top: 30px;
 }
-
-.st-main-div {}
 
 .st-input {
   display: flex;
@@ -136,8 +181,9 @@ color: blue;
   cursor: pointer;
 
 }
+
 .delete-board-n {
-  background-color: #ff0000; 
+  background-color: #ff0000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,8 +201,21 @@ color: blue;
   text-align: center;
   font-size: 20px;
   margin-top: 10px;
-
 }
+
+.add-teacherer {
+  text-align: center;
+  font-size: 20px;
+  /* margin-top: 20px; */
+}
+
+.add-teacherere {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: -150px;
+}
+
 
 .main-bored {
   display: flex;
@@ -185,27 +244,24 @@ color: blue;
   background-color: rgb(39, 39, 39);
   border-radius: 5px;
 }
-.no-notie{
 
-}
 .head {
   width: 135px;
   display: flex;
   flex-direction: column;
 }
+
 .header {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
+
 .headerw {
   width: 595px;
   display: flex;
   flex-direction: column;
 }
-
-
-
 
 
 .add-space {
@@ -237,25 +293,29 @@ color: blue;
   display: flex;
   justify-content: end;
 }
-/* .sub-btnnqaw {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-} */
+
 .input-fild {
   border-radius: 5px;
   padding: 8px;
   width: 150px;
 }
+
 .input-fild-new {
   border-radius: 5px;
   padding: 8px;
   width: 221px;
 }
+
 .work-left {
   font-size: 15px;
   margin-right: 3px;
   width: 80PX;
+}
+
+.work-left-r {
+  font-size: 14px;
+  margin-right: 0px;
+  width: 72PX;
 }
 
 .adgome-img {
@@ -276,8 +336,6 @@ color: blue;
   font-size: 16px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
   border: none;
-  /* cursor: pointer; */
-  /* margin-right: 20px; */
 }
 
 .ad-home-total {
@@ -288,24 +346,23 @@ color: blue;
 
 .homeimgdiv {
   width: 50%;
-
 }
-.notisdiv{
+
+.notisdiv {
   margin-left: 100px;
   margin-top: 30px;
-  /* display: flex;
-  justify-content: center; */
 }
 
 .admin-right {
   width: 80%;
   float: right;
   background-color: #fcfbfb;
-  height: 1000px;
+  height: 1500px;
 }
- .width-tag{
+
+.width-tag {
   font-size: 20px;
- }
+}
 
 .hometextdiv {
   width: 50%;
@@ -348,7 +405,7 @@ color: blue;
   padding: 10px;
 
 }
- 
+
 
 
 
@@ -394,6 +451,37 @@ color: blue;
   margin-right: 20px;
 }
 
+.btnsubasd {
+  background-color: #0dabb3;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  border: none;
+  cursor: pointer;
+}
+
+.btnsubc {
+  background-color: #ed541c;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
 
 .btnsubewsdr {
   background-color: #0dabb3;
@@ -424,7 +512,7 @@ color: blue;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
   border: none;
   cursor: pointer;
- 
+
 }
 
 .btnsubews {

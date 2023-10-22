@@ -67,10 +67,6 @@ export const TCLASS = (id) => {
 }
 
 
-
-
-
-
 export const TOGGLEHOME = (id) => {
     return {
         type: "TOGGLEHOME",
@@ -99,7 +95,6 @@ export const TOGGLECOM = () => {
 }
 
 
-
 export const SRT= () => {
     return {
         type: "SRT_ALL",
@@ -124,10 +119,9 @@ export const ONCHANG= (vlu) => {
 }
 
 
-
 export const ADD = (item) => {
     return {
-        type: "ADD_CART",
+        type: "ADD_OBJ",
         payload: item
     }
 }
@@ -240,5 +234,18 @@ export const LOGINA = (id) => {
     return {
         type: "LOGINA",
         payload: id
+    }
+}
+
+export const ADDNEWSTDS = () => {
+    return {
+        type: "ADDNEWSTDS",
+    }
+}
+
+
+export const CLOSESTDINPUT = () => {
+    return {
+        type: "CLOSESTDINPUT",
     }
 }

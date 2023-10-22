@@ -70,7 +70,7 @@ const AddTeachers = () => {
   return (
 
     <div className='admin-right'>
-<div className="add-teacher">ADD NEW TECHER</div>
+<div className="add-teacher">ADD NEW TEACHER</div>
       <div className="add-space">
 
 
@@ -155,15 +155,15 @@ const AddTeachers = () => {
               className="  login-inn"
              onClick={sorting}
               >
-                       <option value="1st"> class 1st</option>
+                       <option value="1st"> Class 1st</option>
               <option value="#" disabled></option>
-              <option value="2nd">class 2nd</option>
+              <option value="2nd">Class 2nd</option>
               <option value="#" disabled></option>
-              <option value="3rd">class 3rd</option>
+              <option value="3rd">Class 3rd</option>
               <option value="#" disabled></option>
-              <option value="4th">class 4th</option>
+              <option value="4th">Class 4th</option>
               <option value="#" disabled></option>
-              <option value="5th">class 5th</option>
+              <option value="5th">Class 5th</option>
             </select>
          
           </div>
