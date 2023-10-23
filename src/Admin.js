@@ -7,8 +7,9 @@ import "./style.css";
 import AdminHome from './AdminHome';
 import AdminNotice from './AdminNotice';
 import AdminStudents from './AdminStudents';
-import AdminLogin from './AdminLogin';
 import AdminSignup from './AdminSignup';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 const Admin = () => {
   const teacherstoggle = useSelector((state) => state.cartreducer.teacherstoggle);
@@ -22,10 +23,11 @@ const Admin = () => {
   return (<>
 
     {adminloginboard && (
-      <AdminLogin />
+          <SignIn />
     )}
     {adminsignupboard && (
-      <AdminSignup />
+      <SignUp/>
+      // <AdminSignup />
     )}
 
     {adminmainboard && (

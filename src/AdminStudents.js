@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
 import { SNAME, SGENDER, SSAVE, STDDLT, STDEDIT, CHPASS, ADDNEWSTDS, CLOSESTDINPUT } from './redux/actions/action';
 import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
 import { useState } from 'react';
 
@@ -58,8 +60,13 @@ const AdminStudent = () => {
         spassword: spassword
       }
       dispatch(SSAVE(allinpudata));
+      toast.success('Student added successfully', {
+        position: toast.POSITION.TOP_CENTER
+    });
     } else {
-      alert("Please Enter a Valid Data")
+      toast.error('All input fields are requred', {
+        position: "top-center",
+    });
     }
   }
 
@@ -265,6 +272,7 @@ const AdminStudent = () => {
         </div>
         )
       })}
+                  <ToastContainer />
 
       {/* fifthclass end */}
     </div>

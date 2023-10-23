@@ -1,3 +1,14 @@
+
+input[type="text"]:focus {
+ background-color: #f5feff;
+ border-radius: 0px;
+ transition: 0.3s;
+}
+input[type="password"]:focus {
+  background-color: #f5feff;
+  border-radius: 0px;
+  transition: 0.3s;
+ }
 .work-main {
   display: flex;
   align-items: center;
@@ -54,7 +65,12 @@
   font-weight: 500;
   cursor: pointer;
 }
-
+.cursor{
+  cursor: pointer !important;
+}
+.green{
+  background-color: #0dabb3 !important;
+}
 .topic {
   width: 200px;
   height: 20px;
@@ -78,7 +94,7 @@
 }
 
 .img-main-st-sg {
-  width: 150px;
+  width: 100px;
 }
 
 .img-div-sg {
@@ -420,25 +436,7 @@
 }
 
 .btnsubss {
-  background-color: #0dabb3;
-  width: 100px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-radius: 3px;
-  font-size: 16px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
-  border: 1.5px solid #0dabb3;
-  cursor: pointer;
-  transition: 0.4s all ease;
-}
-.btnsubss:hover {
-  background-color: #ffffff;
-  color: #0dabb3;
-  transition: 0.4s all ease;
-  /* border: 1px solid #0dabb3; */
+  background-color: #0dabb3 !important;
 }
 .btnsub {
   background-color: #0dabb3;

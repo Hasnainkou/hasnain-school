@@ -34,10 +34,10 @@ const NavbarAdmin = () => {
   return (
     <div className='navmain'>
       <div className="nav-center">
-        <div className="nav-home nav-ad" onClick={() => togglehome(teachershome)}> <AiOutlineHome />Admin Home</div>
-        <div className="navteachers nav-ad" onClick={() => toggleteacher(teacherstoggle)} > <GiTeacher />  Teachers</div>
-        <div className="navstudents nav-ad" onClick={() => toggletestudent(teachersstudnt)}>      <PiGraduationCapBold />    Students</div>
-        <div className="nav-noties nav-ad" onClick={() => toggletenotice(teachersnotice)}>   <AiOutlineCalendar /> Notices</div>
+        <div className="nav-home nav-ad" onClick={() => togglehome()}> <AiOutlineHome />Admin Home</div>
+        <div className="navteachers nav-ad" onClick={() => toggleteacher()} > <GiTeacher />  Teachers</div>
+        <div className="navstudents nav-ad" onClick={() => toggletestudent()}>      <PiGraduationCapBold />    Students</div>
+        <div className="nav-noties nav-ad" onClick={() => toggletenotice()}>   <AiOutlineCalendar /> Notices</div>
         <div className="nav-noties nav-ad" onClick={() => toggleloginhome()} style={{color:"white" , backgroundColor:"#ed541c", border:"1px solid #ed541c"}}>   <AiOutlineLogout /> Log out</div>
       </div>
     </div>

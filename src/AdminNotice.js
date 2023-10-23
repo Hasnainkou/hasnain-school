@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
 import { NOTICEADD, DELETENOTICE } from './redux/actions/action';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
 import { RxCrossCircled } from 'react-icons/rx';
 
@@ -19,6 +21,9 @@ const AdminNotice = () => {
       discription: name,
     }
     dispatch(NOTICEADD(allinpudata));
+    toast.success('Notice added successfully', {
+      position: toast.POSITION.TOP_CENTER
+  });
     event.target.reset();
   }
 
@@ -54,6 +59,8 @@ const AdminNotice = () => {
         })}
         {noticeboard.length === 0 && (<div style={{ textAlign: "center", fontSize: "18px", marginTop: "15px" }} className='no-notie'>No Notice To Show Right Now</div>)}
       </div>
+      <ToastContainer />
+
     </div>
   )
 }

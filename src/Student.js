@@ -3,6 +3,10 @@ import { useState } from 'react';
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
 import { SFIND, LOGOUT } from './redux/actions/action';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Button from '@mui/material/Button';
+
 
 const Student = () => {
   const [inputdata, setInputData] = useState("");
@@ -33,7 +37,9 @@ const Student = () => {
     if (saved.spassword == pass) {
       dispatch(SFIND(Bruno));
     } else {
-      alert('Invalid credentials');
+      toast.warning('Invalid credentials', {
+        position: toast.POSITION.TOP_CENTER
+    });
     }
   }
   return (
@@ -52,7 +58,7 @@ const Student = () => {
             <div className='in-main'>
               <input type="password" value={pass} id="demo" onChange={passchange} className='in-main' placeholder='Password' /></div>
             <div className="sub-btnnw">
-              <div onClick={checkd} className='btnsubss'>Log In</div>
+                     <Button variant="contained" onClick={checkd} className='btnsubss'>Log In</Button>
             </div>
             <p style={{textAlign:"center"}}>Don't have an account? <br /> Contect to your teacher</p>
           </div>
@@ -89,6 +95,7 @@ const Student = () => {
         {noticeboard.length === 0 && (<div style={{ textAlign: "center", fontSize: "18px", marginTop: "15px", backgroundColor: "black", color: "white" }} className='no-notie'>No Notice To Show Right Now</div>)}
       </>
       )}
+      <ToastContainer />
 
     </div>
   )
